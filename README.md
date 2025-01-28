@@ -31,3 +31,5 @@ Redux process :
 - login and see if the data is coming
 - nav bar should update as soon as user login
 - refactor code to add constant file + create a component Folder
+- If token not present redirect user to login page
+-
