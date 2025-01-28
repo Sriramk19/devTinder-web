@@ -32,4 +32,4 @@ Redux process :
 - nav bar should update as soon as user login
 - refactor code to add constant file + create a component Folder
 - If token not present redirect user to login page
--
+- Logout
