@@ -34,4 +34,7 @@ Redux process :
 - If token not present redirect user to login page
 - Logout Feature
 - Get teh feed and add the feed in teh sttore
-- Build the user on feed
+- Build the usercard on feed
+- Edit profile feature
+- Show toast when edit is sucessfully done
+- see all my connections page
