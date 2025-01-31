@@ -19,7 +19,9 @@ const Requests = () => {
         { withCredentials: true }
       );
       dispatch(removeRequest(_id));
-    } catch (err) {}
+    } catch (err) {
+      setError(err?.response?.data || "Something went wrong");
+    }
   };
 
   const fetchRequests = async () => {
@@ -48,7 +50,7 @@ const Requests = () => {
         return (
           <div
             key={_id}
-            className=" flex justify-betwee items-center m-4 p-4 rounded-lg  bg-primary-content w-1/3 mx-auto "
+            className=" flex justify-betwee items-center m-4 p-4 rounded-lg  bg-primary-content w-2/3 mx-auto "
           >
             <div>
               <img

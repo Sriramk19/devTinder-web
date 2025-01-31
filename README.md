@@ -40,4 +40,6 @@ Redux process :
 - see all my connections page
 - New page - see all connection
 - New page - see all connection request
-- feature - Accept/Reject connection Request
+- feature - Accept/Reject connection Reques
+- send and ignore connection request
+- SignUp page
