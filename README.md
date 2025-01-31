@@ -38,3 +38,5 @@ Redux process :
 - Edit profile feature
 - Show toast when edit is sucessfully done
 - see all my connections page
+- New page - see all connection
+- New page - see all connection request
