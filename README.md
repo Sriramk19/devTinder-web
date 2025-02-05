@@ -43,3 +43,29 @@ Redux process :
 - feature - Accept/Reject connection Reques
 - send and ignore connection request
 - SignUp page
+
+Deployment
+
+signup on AWS
+
+- Launc an instance
+- chmod 400 "secret key"
+- connect tot he machine using ssh command
+- install the required software (node Version 22.12.0)
+- git clone with the HTTPS of git of the respected pprojects
+
+# Front End
+
+- npm install dependencies -> npm install
+- npm run build
+- sudo apt update (Update the system)
+- installing nginx ->sudon apt install nginx
+- To start nginx -> sudo systemctl start nginx
+- To enable nginx -> sudo systemctl enable nginx
+- Copy code from dist folder(build files) to nginx http server (/var/www/html)
+- copying the files from the build done in teh code from vscode to the target file -> sudo scp -r dist/\* /var/www/html
+
+When you have http server og nginx it is deployed on port number 80
+
+- Enable port :80 to make it work on the instance
+  Go to securit group in the instance -> enable port 80 ->all 0 means access to anywhere from internet

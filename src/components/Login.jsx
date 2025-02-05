@@ -113,7 +113,7 @@ const Login = () => {
           <p className="text-red-500">{error}</p>
           <div className="card-actions justify-center">
             <button
-              className="btn btn-primary"
+              className="btn btn-primary rounded-lg w-28"
               onClick={isLoginForm ? handleLogin : handleSignUp}
             >
               {isLoginForm ? "Login" : "SignUp"}

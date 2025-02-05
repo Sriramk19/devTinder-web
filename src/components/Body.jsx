@@ -32,7 +32,7 @@ const Body = () => {
   }, []);
 
   return (
-    <div>
+    <div data-theme="black">
       <NavBar />
       <Outlet />
       <Footer />

@@ -50,23 +50,23 @@ const Requests = () => {
         return (
           <div
             key={_id}
-            className=" flex justify-betwee items-center m-4 p-4 rounded-lg  bg-primary-content w-2/3 mx-auto "
+            className=" flex justify-betwee items-center m-4 p-4 rounded-lg  bg-primary-content w-3/6 mx-auto "
           >
-            <div>
+            <div className="w-1/6 flex justify-center">
               <img
                 alt="photo"
                 className="w-20 h-20 rounded-full"
                 src={photoUrl}
               />
             </div>
-            <div className="text-left mx-4">
-              <h2 className="font-bold text-xl ">
+            <div className=" mx-4 w-2/6 flex justify-center">
+              <h2 className="font-bold text-lg ">
                 {firstName + " " + lastName}
               </h2>
               {age && gender && <p>{age + ", " + gender}</p>}
               <p>{about}</p>
             </div>
-            <div>
+            <div className=" mx-4 w-3/6 flex justify-center">
               <button
                 className="btn btn-primary mx-2"
                 onClick={() => reviewRequest("accepted", request._id)}
@@ -80,6 +80,17 @@ const Requests = () => {
                 Reject
               </button>
             </div>
+            {/* <div class="flex justify-between items-center p-4 space-x-4 bg-gray-200">
+              <div class="bg-blue-500 p-6 text-white rounded-lg w-1/3 text-center">
+                Box 1
+              </div>
+              <div class="bg-green-500 p-6 text-white rounded-lg w-1/3 text-center">
+                Box 2
+              </div>
+              <div class="bg-red-500 p-6 text-white rounded-lg w-1/3 text-center">
+                Box 3
+              </div>
+            </div> */}
           </div>
         );
       })}
