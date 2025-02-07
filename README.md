@@ -69,3 +69,36 @@ When you have http server og nginx it is deployed on port number 80
 
 - Enable port :80 to make it work on the instance
   Go to securit group in the instance -> enable port 80 ->all 0 means access to anywhere from internet
+
+# BackEnd
+
+- Updated DB password (As there was a problem in the video of saini)
+- allowed EC2 instance public IP on mongo DB server
+- instaled pm2 -> npm install pm2 -g
+- pm2 start src/app.js --name dev-tinder
+  -pm2 logs <name>
+  -pm2 list <name>
+  -pm2 delete <name>
+  -pm2 stop <name>
+  -pm2 flush <name>
+
+- configure nginx - /etc/nginx/sites-available/default
+- restart nginx - sudo systemctl restart nginx
+- Modigfy the BASE_URL in frontEnd project to "/api"
+
+- NGINX CONfIG:
+
+Backend: http://51.20.5.172:7777/feed
+FrontEnd: http://51.20.5.172 => /api
+
+nginx :
+server_name 51.20.5.172;
+
+         location /api/ {
+        proxy_pass http://localhost:7777/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
